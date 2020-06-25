@@ -8,14 +8,13 @@ Author: Easy Event Planning (Carlo)
 License: GPLv2 or later
 **/
 
-// function eep_popup_load_scripts(){
-//     wp_register_script('eep_popup_script', JS_FILE, array('jquery'), NULL, true );
-//     wp_enqueue_script('eep_popup_script');
-// }
-// add_action('wp_enqueue_scripts', 'eep_popup_load_scripts');
+ function eep_popup_load_scripts(){
+     wp_register_script('eep_popup_script', JS_FILE, array('jquery'), NULL, true );
+     wp_enqueue_script('eep_popup_script');
+ }
+ add_action('wp_enqueue_scripts', 'eep_popup_load_scripts');
 
 function show_eep_custom_popup( $atts, $content = null ) {
-    // $atts, $content = null
     echo "<button id='email_list'>Test Popup</button>";
     //echo 'After creating the popup (from the plugin you created), you must generate a code to identify it, this generated code must arrive here and with this code you will know the information and the popup it should show.';
   }
@@ -24,9 +23,6 @@ function show_eep_custom_popup( $atts, $content = null ) {
   //show popup (where we want the button that opens the popup to be displayed)
   //do_shortcode( '[show_eep_custom_popup('norm')]' );
 ?>
-
-<!-- <script src="/wp-includes/js/jquery-3.5.1.min.js"></script>
-<script src="/wp-includes/js/sweetalert2.all.min.js"></script> -->
 
 <!-- <script src="/js/jquery-3.5.1.min.js"></script>
 <script src="/js/sweetalert2.all.min.js"></script> -->
@@ -51,7 +47,7 @@ function show_eep_custom_popup( $atts, $content = null ) {
                 showCloseButton: true,
                 imageAlt: 'EasyEventPlanning'
                 })
-            // Validates if email is legit
+            // if email is in the correct format
             if (email) {
                 Swal.fire({
                     title: `Thank you for signing up for our newsletter!`,
