@@ -21,7 +21,7 @@ function show_eep_custom_popup( $atts, $content = null ) {
   add_shortcode( 'show_eep_custom_popup', 'show_eep_custom_popup' );
   
   //show popup (where we want the button that opens the popup to be displayed)
-  //do_shortcode( '[show_eep_custom_popup('norm')]' );
+  //do_shortcode( '[show_eep_custom_popup]' );
 ?>
 
 <!-- <script src="/js/jquery-3.5.1.min.js"></script>
